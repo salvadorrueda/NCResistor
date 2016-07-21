@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://salvadorruedappau.com/Resitor" version="1.0.1" viewmodes="maximized">
+    <tizen:application id="g5VPvh8ewE.NCResitor" package="g5VPvh8ewE" required_version="2.2.1"/>
+    <author href="http://salvadorruedapau.com" email="SalvadorRueda@gmail.com">Salvador Rueda</author>
+    <content src="index.html"/>
+    <description>Resistor is an app that shows the value of a resistor by choosing the colors of their bands.</description>
+    <feature name="http://tizen.org/feature/screen.size.normal"/>
+    <icon src="resistor.png" height="117" width="117"/>
+    <name>Resitor</name>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:profile name="wearable"/>
+    <tizen:setting hwkey-event="enable"/>
+</widget>

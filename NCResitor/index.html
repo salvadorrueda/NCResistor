@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>Circular UI</title>
+	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+	<!-- load theme file for your application -->
+	<link rel="stylesheet" href="css/style.css">
+		<script src="language.js"></script>
+	<script>
+      function init(){
+          document.getElementById("vr").innerHTML=TIZEN_L10N["value"]+"Ω";
+          document.getElementById("vInfo").innerHTML=TIZEN_L10N["info1"];
+          
+          }
+	</script>
+</head>
+<body onload="init();">
+<div class="ui-page" id="pageRotaryEvent" data-enable-page-scroll="false">
+   <header class="ui-header">
+      <h2 id="vr" class="ui-title"></h2> 
+   </header>
+   <div class="ui-content">
+     <!-- <div id="result"></div> --> 
+      	 
+      	   <img id="r1" src="img/r10.png"><img id="r2" src="img/r20.png"><img id="r3" src="img/r30.png">
+      		      	 	 
+      	<div id="vInfo"></div>		 
+      	<div style="visibility:hidden">   
+      	  <progress class="ui-circle-progress" id="circleprogress" max="100" value="0"></progress>   
+      	</div>   			   
+      
+   </div>
+</div>	
+	<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+	 <script type="text/javascript" src="js/circle-helper.js"></script> 
+	
+	<script src="app.js"></script>
+	<script src="lowBatteryCheck.js"></script>
+	
+</body>
+</html>
