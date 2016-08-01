@@ -9,23 +9,26 @@
 	<link rel="stylesheet" href="css/style.css">
 		<script src="language.js"></script>
 	<script>
-      function init(){
+      function initl(){
           document.getElementById("vr").innerHTML=TIZEN_L10N["value"]+"Ω";
-          document.getElementById("vInfo").innerHTML=TIZEN_L10N["info1"];
-          
+          document.getElementById("vInfo").innerHTML=TIZEN_L10N["info1"]+TIZEN_L10N["info2"];
+
+          //document.getElementById("vr").innerHTML="Valor Ω";
+          //document.getElementById("vInfo").innerHTML="Escoge color <br> con el Bisel. Toca la pantalla para cambiar de banda.";
           }
 	</script>
 </head>
-<body onload="init();">
+<body onload="initl();">
 <div class="ui-page" id="pageRotaryEvent" data-enable-page-scroll="false">
    <header class="ui-header">
       <h2 id="vr" class="ui-title"></h2> 
    </header>
    <div class="ui-content">
      <!-- <div id="result"></div> --> 
-      	 
+      	   <img id="b" src="img/bezel.png"><br/>
       	   <img id="r1" src="img/r10.png"><img id="r2" src="img/r20.png"><img id="r3" src="img/r30.png">
-      		      	 	 
+      	   <img id="m" src="img/m1.png">
+      	   	      	 	 
       	<div id="vInfo"></div>		 
       	<div style="visibility:hidden">   
       	  <progress class="ui-circle-progress" id="circleprogress" max="100" value="0"></progress>   

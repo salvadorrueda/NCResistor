@@ -18,6 +18,7 @@ var r2 = 0; // Valor de la segunda banda.
 var r3 = 0; // Valor de la tercera banda.
 var inc = 0; // Incremento al mover el Bisel.
 var band = 1; // Valor de la banda a la que se aplica el incremento.
+var ibezel = 0;
 
 function updateResist(){
 	switch(band){
@@ -66,8 +67,9 @@ function calcResist(){
          direction = e.detail.direction;
          
          // Mejor si solo se ejecuta una vez.
-         //document.getElementById("vInfo").innerHTML="Toca la pantalla para cambiar de banda.";
-         document.getElementById("vInfo").innerHTML=TIZEN_L10N["info2"];
+         document.getElementById("vInfo").innerHTML=TIZEN_L10N["info1"]+TIZEN_L10N["info2"];
+         //document.getElementById("vInfo").innerHTML="Escoge color <br> con el Bisel. Toca la pantalla para cambiar de banda.";
+         
          if (direction === "CW") {
             // Right direction
         	 
@@ -132,12 +134,26 @@ function changeBand(){
 	switch(band){
 	case 1:
 		inc=r1;
+		document.getElementById("m").src="img/m1.png";
+
+		document.getElementById("b").src="";
+		document.getElementById("b").style.visibility="hidden";
 		break;
 	case 2:
 		inc=r2;
+		document.getElementById("m").src="img/m2.png";
+		
+
+		document.getElementById("b").src="";
+		document.getElementById("b").style.visibility="hidden";
 		break;
 	case 3:
 		inc=r3;
+		document.getElementById("m").src="img/m3.png";
+		if (r1 === 0 && r2 === 0 && r3 === 0){
+			document.getElementById("b").src="img/bezel.png";
+			document.getElementById("b").style.visibility="visible";
+		}
 		break;
 	}
 }
